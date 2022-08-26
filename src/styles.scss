@@ -1,0 +1,64 @@
+/* (C) Copyright 2022 Lyvan M. <lywaan@yeystudio.com>
+ * SPDX-License-Identifier: GPL-3.0
+ */
+
+.r3s-toggleContainer {
+    --widget-width: 32px;
+    --button-width: 28px;
+    --animation-duration: 0.35s;
+  
+    cursor: pointer;
+    width: calc(var(--widget-width) * 2);
+    &[data-boolean='true'] {
+      width: calc(var(--widget-width) * 1.5);
+    }
+  
+    height: var(--widget-width);
+    background-color: var(--color-primary);
+    border-radius: calc(var(--widget-width) / 2);
+    border: 0px;
+    margin: 0;
+    padding: 0 calc((var(--widget-width) - var(--button-width)) / 2);
+  
+    display: flex;
+    align-items: center;
+  
+    transition-property: background-color;
+    transition-duration: var(--animation-duration);
+  
+    &[data-toggle='0'] {
+      background-color: red;
+      .r3s-toggle {
+        margin-left: 0;
+      }
+    }
+  
+    &[data-toggle='1'] {
+      background-color: gray;
+      .r3s-toggle {
+        margin-left: calc(50% - (var(--button-width) / 2));
+      }
+    }
+  
+    &[data-toggle='2'] {
+      background-color: green;
+      .r3s-toggle {
+        margin-left: calc(100% - var(--button-width));
+      }
+    }
+  
+    .r3s-toggle {
+      height: var(--button-width);
+      width: var(--button-width);
+      border-radius: calc(var(--button-width) / 2);
+      border: 0px;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+  
+      transition-property: margin;
+      transition-duration: 0.5s;
+      transition-duration: var(--animation-duration);
+    }
+  }
+  
