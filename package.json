@@ -1,6 +1,6 @@
 {
   "name": "react-3switch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple and minimal React component for two state and three state toggle switches built with no extra dependencies.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
